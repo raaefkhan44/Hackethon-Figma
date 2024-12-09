@@ -34,21 +34,11 @@ export default function Signup() {
               
             </button>
           </form>
-          <div className="mt-4 text-center">
-            <p className="text-sm">Or sign up with:</p>
-            <div className="flex justify-center gap-4 mt-2">
-              <button className="bg-gray-100 p-2 rounded">
-                <Image src="/icons/google-icon.png" alt="Google" width="24" />
-              </button>
-              <button className="bg-gray-100 p-2 rounded">
-                <Image src="/icons/apple-icon.png" alt="Apple" width="24" />
-              </button>
-            </div>
-          </div>
+          
         </div>
       </main>
 
-      {/* Footer Section */}
+  
       <Footer />
     </div>
   );
