@@ -1,4 +1,5 @@
 import Header from "./Header";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -7,7 +8,7 @@ export default function HeroSection() {
       <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center px-6 lg:px-16 py-10 lg:py-20">
      
         <div className="hidden lg:flex items-start mt-6 lg:mt-0">
-          <img
+          <Image
             src="/social.png"
             alt="Social Bar"
             className="w-[25px] h-[250px] md:h-[400px] lg:h-[592px]"
@@ -34,7 +35,7 @@ export default function HeroSection() {
 
      
         <div className="flex-1 mt-10 lg:mt-0 flex justify-center items-center">
-          <img
+          <Image
             src="/Image.png"
             alt="Delicious Food"
             className="rounded-lg shadow-lg max-w-full h-auto"

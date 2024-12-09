@@ -1,5 +1,6 @@
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import Image from "next/image";
 
 export default function Signup() {
   return (
@@ -37,10 +38,10 @@ export default function Signup() {
             <p className="text-sm">Or sign up with:</p>
             <div className="flex justify-center gap-4 mt-2">
               <button className="bg-gray-100 p-2 rounded">
-                <img src="/icons/google-icon.png" alt="Google" width="24" />
+                <Image src="/icons/google-icon.png" alt="Google" width="24" />
               </button>
               <button className="bg-gray-100 p-2 rounded">
-                <img src="/icons/apple-icon.png" alt="Apple" width="24" />
+                <Image src="/icons/apple-icon.png" alt="Apple" width="24" />
               </button>
             </div>
           </div>

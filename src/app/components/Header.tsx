@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { FiSearch, FiShoppingCart } from "react-icons/fi";
+import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,43 +14,43 @@ export default function Header() {
         </h1>
 
         <nav className="hidden md:flex space-x-6 text-sm">
-          <a href="/" className="hover:text-yellow-500">
-            Home
-          </a>
-          <a href="/menu" className="hover:text-yellow-500">
+          <Link href="/" className="hover:text-yellow-500"> Home</Link>
+           
+          
+          <Link href="/menu" className="hover:text-yellow-500">
             Menu
-          </a>
-          <a href="/blog" className="hover:text-yellow-500">
+          </Link>
+          <Link href="/blog" className="hover:text-yellow-500">
             Blog
-          </a>
-          <a href="/pages" className="hover:text-yellow-500">
+          </Link>
+          <Link href="/pages" className="hover:text-yellow-500">
             Pages
-          </a>
+          </Link>
           <div className="relative group">
             <button className="hover:text-yellow-500 flex items-center">
               About <span className="ml-1">&#x25BC;</span>
             </button>
             <div className="absolute left-0 hidden mt-2 w-32 bg-black rounded-md shadow-md group-hover:block">
-              <a
+              <Link
                 href="/services"
                 className="block px-4 py-2 hover:bg-yellow-500 hover:text-black"
               >
                 Services
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/signup"
                 className="block px-4 py-2 hover:bg-yellow-500 hover:text-black"
               >
                 Signup
-              </a>
+              </Link>
             </div>
           </div>
-          <a href="/shop" className="hover:text-yellow-500">
+          <Link href="/shop" className="hover:text-yellow-500">
             Shop
-          </a>
-          <a href="/contact" className="hover:text-yellow-500">
+          </Link>
+          <Link href="/contact" className="hover:text-yellow-500">
             Contact
-          </a>
+          </Link>
         </nav>
 
         <div className="hidden md:flex items-center space-x-4">
@@ -74,40 +75,40 @@ export default function Header() {
 
       {isMenuOpen && (
         <nav className="md:hidden bg-black text-white">
-          <a href="/" className="block px-4 py-2 hover:bg-yellow-500">
+          <Link href="/" className="block px-4 py-2 hover:bg-yellow-500">
             Home
-          </a>
-          <a href="/menu" className="block px-4 py-2 hover:bg-yellow-500">
+          </Link>
+          <Link href="/menu" className="block px-4 py-2 hover:bg-yellow-500">
             Menu
-          </a>
-          <a href="/blog" className="block px-4 py-2 hover:bg-yellow-500">
+          </Link>
+          <Link href="/blog" className="block px-4 py-2 hover:bg-yellow-500">
             Blog
-          </a>
+          </Link>
           <div className="relative">
             <button className="w-full text-left px-4 py-2 hover:bg-yellow-500">
               About Us
             </button>
             <div className="pl-4">
-              <a
+              <Link
                 href="/services"
                 className="block px-4 py-2 hover:bg-yellow-500"
               >
                 Services
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/signup"
                 className="block px-4 py-2 hover:bg-yellow-500"
               >
                 Signup
-              </a>
+              </Link>
             </div>
           </div>
-          <a href="/shop" className="block px-4 py-2 hover:bg-yellow-500">
+          <Link href="/shop" className="block px-4 py-2 hover:bg-yellow-500">
             Shop
-          </a>
-          <a href="/contact" className="block px-4 py-2 hover:bg-yellow-500">
+          </Link>
+          <Link href="/contact" className="block px-4 py-2 hover:bg-yellow-500">
             Contact
-          </a>
+          </Link>
         </nav>
       )}
     </header>
