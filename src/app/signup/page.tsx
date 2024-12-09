@@ -7,8 +7,6 @@ export default function Signup() {
     <div className="">
   <Header/>
      
-
-      {/* Signup Section */}
       <main className="flex-grow bg-gray-100 flex items-center justify-center">
         <div className="bg-white p-8 shadow-lg rounded-lg max-w-md w-full">
           <h2 className="text-2xl font-bold mb-6 text-center">Sign Up</h2>

@@ -12,11 +12,8 @@ export default function Header() {
         <h1 className="text-2xl font-bold text-yellow-500">
           Food<span className="text-white">luck</span>
         </h1>
-
         <nav className="hidden md:flex space-x-6 text-sm">
           <Link href="/" className="hover:text-yellow-500"> Home</Link>
-           
-          
           <Link href="/menu" className="hover:text-yellow-500">
             Menu
           </Link>
