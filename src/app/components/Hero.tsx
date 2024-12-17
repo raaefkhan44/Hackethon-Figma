@@ -64,7 +64,7 @@ export default function HeroSection() {
           </p>
           <h1 className="text-[48px] md:text-5xl lg:text-6xl font-bold leading-snug mb-6">
             <span className="text-yellow-500">We</span> Create the best
-          foody product
+          food product
 
           </h1>
           <p className="text-gray-400 text-[16px] text-sm md:text-base lg:text-lg mb-6">
