@@ -7,12 +7,16 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-black text-white">
-      <div className="container mx-auto flex items-center justify-between px-4 py-4">
+    <div >
+    <br />
+    <header className="bg-transparent  text-white">
+        <div className="flex justify-center mx-auto ">
         <h1 className="text-2xl font-bold text-yellow-500">
           Food<span className="text-white">luck</span>
-        </h1>
-        <nav className="hidden md:flex space-x-6 text-sm">
+        </h1></div>
+        
+      <div className="container mx-auto flex items-center  justify-around px-4 py-4">
+        <nav className="hidden md:flex space-x-7 text-sm">
           <Link href="/" className="hover:text-yellow-500"> Home</Link>
           <Link href="/menu" className="hover:text-yellow-500">
             Menu
@@ -109,5 +113,6 @@ export default function Header() {
         </nav>
       )}
     </header>
+    </div>
   );
 }

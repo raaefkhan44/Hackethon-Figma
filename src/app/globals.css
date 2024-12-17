@@ -26,7 +26,7 @@ body {
 
 .bg-multiple {
   background-image: url('/hero-bg.png'), url('/background.png');
-  background-size: cover, contain;/*  Adjust sizes as needed */
+  background-size:auto, contain;/*  Adjust sizes as needed */
  background-position: center, top right; /*  Adjust positions as needed */
  }
 
