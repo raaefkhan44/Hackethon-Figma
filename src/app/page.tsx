@@ -1,7 +1,10 @@
 
 import Hero from './components/Hero';
-
 import Footer from './components/Footer';
+import ImageGrid from './components/ImageGrid';
+
+
+
 
 export default function Home() {
   return (
@@ -9,7 +12,10 @@ export default function Home() {
       
       <main>
         <Hero />
+  <ImageGrid/>
   
+ 
+
       </main>
       <Footer />
     </div>

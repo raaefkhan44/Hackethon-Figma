@@ -11,7 +11,7 @@ export default function Header() {
     <br />
     <header className="bg-transparent  text-white">
         <div className="flex justify-center mx-auto ">
-        <h1 className="text-2xl font-bold text-yellow-500">
+        <h1 className="text-2xl font-bold text-yellow-500"> 
           Food<span className="text-white">luck</span>
         </h1></div>
         

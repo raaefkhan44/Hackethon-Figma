@@ -30,5 +30,13 @@ body {
  background-position: center, top right; /*  Adjust positions as needed */
  }
 
+ .bg-food{
+  background-image: url('/bg-f.png'), url('/feedback-bg.png');
+  background-size:auto, cover;/*  Adjust sizes as needed */
+ background-position: center, top right;
+ background-repeat: no-repeat;
+}
+
+
 
 
