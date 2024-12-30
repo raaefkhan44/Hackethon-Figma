@@ -3,13 +3,13 @@ import Header from "./Header";
 import Image from "next/image";
 import { FaCheck } from "react-icons/fa";
 
-export default function HeroSection() {
+export default function Hero() {
   return (
     <div>
       {/* Hero Section */}
       <section className="bg-cover bg-center text-white bg-multiple">
-        <Header />
-        <div className="container mx-auto mt-14 flex flex-col-reverse lg:flex-row items-center px-6 lg:px-16 py-10 lg:py-20">
+        <Header/>   
+        <div className="container mx-auto  flex flex-col-reverse lg:flex-row items-center px-6 lg:px-16 py-10 lg:py-20">
           {/* Social Image */}
           <div className="hidden lg:flex  items-start mt-6 lg:mt-0">
             <Image
@@ -24,18 +24,18 @@ export default function HeroSection() {
 
           {/* Hero Content */}
           <div className="flex-1 text-center lg:text-left">
-            <p className="text-yellow-500 font-semibold text-xl md:text-2xl lg:text-3xl mb-2">
+            <p className="text-[#FF9F0D] font-semibold text-xl md:text-2xl lg:text-3xl mb-2">
               <i>It&#39;s Quick & Amusing!</i>
             </p>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-snug mb-6">
-              <span className="text-yellow-500">The</span> Art of Speed <br />
+              <span className="text-[#FF9F0D]">The</span> Art of Speed <br />
               Food Quality
             </h1>
             <p className="text-gray-400 text-sm md:text-base lg:text-lg mb-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed
               pharetra dictum neque massa congue.
             </p>
-            <button className="bg-yellow-500 text-white font-bold py-2 px-6 md:py-3 md:px-8 rounded-full hover:bg-yellow-600 transition">
+            <button className="bg-[#FF9F0D] text-white font-bold py-2 px-6 md:py-3 md:px-8 rounded-full hover:bg-[#FF9F0D] transition">
               See Menu
             </button>
           </div>
@@ -58,11 +58,11 @@ export default function HeroSection() {
         <div className="container mx-auto flex flex-col lg:flex-row items-center px-6 py-10 lg:py-20">
           {/* About Content */}
           <div className="flex-1 text-center lg:text-left">
-            <p className="text-yellow-500 font-semibold text-xl font-serif italic md:text-2xl lg:text-3xl mb-2">
+            <p className="text-[#FF9F0D] font-semibold text-xl font-serif italic md:text-2xl lg:text-3xl mb-2">
               <i>About Us</i>
             </p>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-snug mb-6">
-              <span className="text-yellow-500">We</span> Create the Best
+              <span className="text-[#FF9F0D]">We</span> Create the Best
               Food Product
             </h1>
             <p className="text-gray-400 text-sm md:text-base lg:text-lg mb-6">
@@ -70,21 +70,21 @@ export default function HeroSection() {
             </p>
             <ul className="space-y-4 mb-6">
               <li className="flex items-center">
-                <FaCheck size={20} className="text-orange-500" />
+                <FaCheck size={20} className="text-[#FF9F0D]" />
                 <p className="ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
               </li>
               <li className="flex items-center">
-                <FaCheck size={20} className="text-orange-500" />
+                <FaCheck size={20} className="text-[#FF9F0D]" />
                 <p className="ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi.</p>
               </li>
               <li className="flex items-center">
-                <FaCheck size={20} className="text-orange-500" />
+                <FaCheck size={20} className="text-[#FF9F0D]" />
                 <p className="ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
               </li>
             </ul>
             <Link
               href="/about"
-              className="inline-block bg-transparent border border-orange-500 text-orange-500 py-2 px-6 rounded-full font-medium hover:bg-orange-500 hover:text-black transition duration-300"
+              className="inline-block bg-transparent border border-[#FF9F0D] text-[#FF9F0D] py-2 px-6 rounded-full font-medium hover:bg-orange-500 hover:text-black transition duration-300"
             >
               Read More
             </Link>
@@ -121,9 +121,9 @@ export default function HeroSection() {
 
       {/* Food Category Section */}
       <div className="bg-black text-center py-10">
-        <h1 className="text-2xl font-serif text-yellow-500 italic">Food Category</h1>
+        <h1 className="text-2xl font-serif text-[#FF9F0D] italic">Food Category</h1>
         <h2 className="text-4xl font-serif italic mt-4">
-          <span className="text-yellow-500">Choose</span> Food Item
+          <span className="text-[#FF9F0D]">Choose</span> Food Item
         </h2>
       </div>
     </div>
