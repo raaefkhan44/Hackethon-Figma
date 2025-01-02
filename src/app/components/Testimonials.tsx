@@ -70,7 +70,7 @@ export const Testimonials = () => {
 
   return (
     <div className="py-16 bg-black text-white relative overflow-hidden">
-      <div className="ml-5 sm:ml-10 lg:ml-32 mb-10">
+      <div className=" max-w-[1273px] mx-auto  mb-10">
         <p className="text-base sm:text-lg lg:text-xl font-serif italic text-[#FF9F0D]">
           Testimonials
         </p>

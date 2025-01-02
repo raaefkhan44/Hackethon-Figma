@@ -48,13 +48,16 @@ export const Menucard = () => {
       </header>
 
       {/* Tabs Section */}
-      <nav aria-label="Category Tabs" className="flex justify-center mb-8 overflow-x-auto no-scrollbar">
-        <ul className="flex">
+      <nav 
+        aria-label="Category Tabs" 
+        className="flex justify-center mb-8 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200"
+      >
+        <ul className="flex space-x-4  px-4">
           {CATEGORY_TABS.map((tab) => (
-            <li key={tab}>
+            <li key={tab} className="flex-shrink-0">
               <button
                 onClick={() => setCategory(tab)}
-                className={`text-base md:text-lg mx-2 sm:mx-4 py-2 whitespace-nowrap transition 
+                className={`text-base md:text-lg py-2 whitespace-nowrap transition 
                   ${
                     category === tab
                       ? "text-[#FF9F0D] font-semibold border-b-2 border-[#FF9F0D]"
@@ -68,6 +71,7 @@ export const Menucard = () => {
           ))}
         </ul>
       </nav>
+    
 
       {/* Content Section */}
       <section className="flex flex-col lg:flex-row items-start gap-6">

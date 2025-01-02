@@ -69,10 +69,7 @@ export const OurChef = () => {
 
       </div>
 
-      {/* Decoration Image */}
-      {/* <div className="absolute -left-20 top-16 z-0">
-        <Image src={ChefDill} alt="Decoration Dill" width={250} height={250} />
-      </div> */}
+      
     </div>
   );
 };

@@ -35,9 +35,12 @@ export default function Hero() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed
               pharetra dictum neque massa congue.
             </p>
-            <button className="bg-[#FF9F0D] text-white font-bold py-2 px-6 md:py-3 md:px-8 rounded-full hover:bg-[#FF9F0D] transition">
+           <Link
+              href="/Menu"
+              className="bg-[#FF9F0D] text-white font-bold py-2 px-6 md:py-3 md:px-8 rounded-full hover:bg-[#FF9F0D] transition duration-300"
+            >
               See Menu
-            </button>
+            </Link>
           </div>
 
           {/* Hero Image */}

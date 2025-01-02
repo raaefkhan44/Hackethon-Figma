@@ -83,7 +83,7 @@
                 offering a variety of delicious meals prepared with love and precision.
               </p>
               <ul className="flex flex-wrap gap-6">
-                {[{ src: "/burger-logo.png", label: "Fast Food" }, { src: "/Wine.png", label: "Lunch" }, { src: "/Cookie.png", label: "Dinner" }].map((item, idx) => (
+                {[{ src: "/burger-logo.png", label: "Fast Food" }, { src: "/Wine.png", label: "Lunch" }, { src: "/Cookie.png", label: "Dinner" }].map((item, idx) => 
                   <li key={idx} className="text-center">
                     <div className="bg-[#FF9F0D] transform hover:scale-110 p-5 mb-2 w-20 h-20 rounded-lg shadow-md flex items-center justify-center">
                       <Image
@@ -96,7 +96,7 @@
                     </div>
                     <span className="font-semibold text-lg">{item.label}</span>
                   </li>
-                ))}
+                )}
               </ul>
               <div className="flex justify-between items-center bg-gray-200 w-full md:w-4/5 p-4 mt-6 rounded-lg border-l-8 border-[#FF9F0D] shadow-lg">
                 <span className="text-5xl font-bold text-[#FF9F0D]">30+</span>
