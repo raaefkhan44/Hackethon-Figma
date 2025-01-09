@@ -86,7 +86,7 @@ const MainBreadcum: React.FC<BannerSectionProps> = ({ name, pageName }) => {
           >
             Home
           </Link>
-          <Typography className="dmSans" color="white">
+          <Typography className="dmSans hover:cursor-pointer hover:text-[#FF9F0D]" color="white">
             {pageName}
           </Typography>
         </Breadcrumbs>

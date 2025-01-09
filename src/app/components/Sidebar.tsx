@@ -63,6 +63,8 @@ const Sidebar = () => {
             <Image
               src="/sidebar.png"
               alt="Classic Restaurant"
+              width={200}
+              height={200}
               className="w-full h-auto rounded"
             />
             <div className="absolute top-5 left-5 bg-opacity-40 text-white flex flex-col justify-center items-start rounded">

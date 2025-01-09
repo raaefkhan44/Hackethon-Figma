@@ -8,10 +8,6 @@ import { OurChef } from '../components/OurChefs';
 import { Testimonials } from '../components/Testimonials';
 
 
-
-
-
-
 export default function Home() {
   return (
     <div className="bg-transparent text-white">

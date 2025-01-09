@@ -75,10 +75,11 @@ const Footer = () => {
               <Link href='/ChefTeam'>
               <li className="my-2 hover:text-[#FF9F0D] cursor-pointer">
                 Team
-              </li></Link>
+              </li></Link >
+              <Link href='/Menu'>
               <li className="my-2 hover:text-[#FF9F0D] cursor-pointer">
                 Menu
-              </li>
+              </li></Link >
               <Link href='/Signup'>
               <li className="my-2 hover:text-[#FF9F0D] cursor-pointer">
                 Contacts
@@ -91,7 +92,7 @@ const Footer = () => {
           <div className="mb-8 lg:mb-0 lg:w-1/4">
             <h3 className="text-lg font-bold mb-3">Help?</h3>
             <ul>
-                <Link href='Faq'>
+                <Link href='/FAQ'>
                 <li className="my-2 hover:text-[#FF9F0D] cursor-pointer">FAQ</li></Link>
               
               <li className="my-2 hover:text-[#FF9F0D] cursor-pointer">

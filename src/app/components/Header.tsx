@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <div>
       <br />
-      <header className="bg-transparent text-white">
+      <header className="bg-transparent text-white relative">
         {/* Logo Section */}
         <div className="flex justify-center mx-auto">
           <Link href="/">
@@ -26,12 +26,14 @@ export default function Header() {
           <nav className="hidden md:flex space-x-7 text-sm">
             <Link href="/" className="hover:text-[#FF9F0D]">Home</Link>
             <Link href="/Menu" className="hover:text-[#FF9F0D]">Menu</Link>
-            <Link href="/blog" className="hover:text-[#FF9F0D]">Blog</Link>
-            <Link href="/pages" className="hover:text-[#FF9F0D]">Pages</Link>
+            <Link href="/Blog" className="hover:text-[#FF9F0D]">Blog</Link>
+            
             <div className="relative group">
+              <Link href='/About'>
               <button className="hover:text-[#FF9F0D] flex items-center">
                 About <span className="ml-1">&#x25BC;</span>
               </button>
+              </Link>
               <div className="absolute left-0 hidden mt-2 w-32 bg-black rounded-md shadow-md group-hover:block">
                 <Link
                   href="/services"
@@ -48,7 +50,7 @@ export default function Header() {
               </div>
             </div>
             <Link href="/Shop" className="hover:text-[#FF9F0D]">Shop</Link>
-            <Link href="/contact" className="hover:text-[#FF9F0D]">Contact</Link>
+            <Link href="/Contact" className="hover:text-[#FF9F0D]">Contact</Link>
           </nav>
 
           {/* Desktop Search and Cart */}
@@ -61,9 +63,13 @@ export default function Header() {
               />
               <FiSearch className="absolute right-3 top-2 text-[#FF9F0D] cursor-pointer" />
             </div>
-            <FiShoppingCart className="text-xl hover:text-[#FF9F0D] cursor-pointer" />
+            <Link href='/Cart'>
+          <button className="text-white-500 text-xl hover:text-[#FF9F0D]">
+            <FiShoppingCart size={20} />
+          </button>
+          </Link>
              {/* User Icon */}
-          <Link href='/SignUp'>
+          <Link href='/Login'>
           <button className="text-white-500 text-xl hover:text-[#FF9F0D]">
             <FaUserAlt size={20} />
           </button>
@@ -73,7 +79,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-[#FF9F0D] ml-80 -mt-16"
+            className="md:hidden text-[#FF9F0D] absolute right-10 top-2"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -85,8 +91,8 @@ export default function Header() {
           <div className="md:hidden bg-gray-900 px-6 py-4 space-y-4">
             <Link href="/" className="block hover:text-[#FF9F0D]">Home</Link>
             <Link href="/Menu" className="block hover:text-[#FF9F0D]">Menu</Link>
-            <Link href="/blog" className="block hover:text-[#FF9F0D]">Blog</Link>
-            <Link href="/pages" className="block hover:text-[#FF9F0D]">Pages</Link>
+            <Link href="/Blog" className="block hover:text-[#FF9F0D]">Blog</Link>
+            
             <Link href="/Shop" className="block hover:text-[#FF9F0D]">Shop</Link>
             <Link href="/contact" className="block hover:text-[#FF9F0D]">Contact</Link>
 

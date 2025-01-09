@@ -44,7 +44,12 @@ const Products = () => {
 
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="bg-white p-2 rounded-full shadow-lg hover:bg-[#FF9F0D]">
+                   <Link href='/Cart' >                 
+                                     
                     <FaShoppingCart className="text-black " />
+                   
+                    </Link>
+
                   </div>
                   <div className="bg-white p-2 rounded-full shadow-lg hover:bg-[#FF9F0D]">
                     <FaHeart className="text-black" />
@@ -54,6 +59,7 @@ const Products = () => {
                   </div>
                 </div>
               </div>
+              
               <div className="mt-2 p-2">
                 <h3 className="text-sm font-semibold">{product.name}</h3>
                 <div className="flex items-center space-x-2 text-sm mt-1">
