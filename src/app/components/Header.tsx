@@ -31,23 +31,10 @@ export default function Header() {
             <div className="relative group">
               <Link href='/About'>
               <button className="hover:text-[#FF9F0D] flex items-center">
-                About <span className="ml-1">&#x25BC;</span>
+                About <span className="ml-1"></span>
               </button>
               </Link>
-              <div className="absolute left-0 hidden mt-2 w-32 bg-black rounded-md shadow-md group-hover:block">
-                <Link
-                  href="/services"
-                  className="block px-4 py-2 hover:bg-[#FF9F0D] hover:text-black"
-                >
-                  Services
-                </Link>
-                <Link
-                  href="/signup"
-                  className="block px-4 py-2 hover:bg-[#FF9F0D] hover:text-black"
-                >
-                  Signup
-                </Link>
-              </div>
+             
             </div>
             <Link href="/Shop" className="hover:text-[#FF9F0D]">Shop</Link>
             <Link href="/Contact" className="hover:text-[#FF9F0D]">Contact</Link>
@@ -94,7 +81,7 @@ export default function Header() {
             <Link href="/Blog" className="block hover:text-[#FF9F0D]">Blog</Link>
             
             <Link href="/Shop" className="block hover:text-[#FF9F0D]">Shop</Link>
-            <Link href="/contact" className="block hover:text-[#FF9F0D]">Contact</Link>
+            <Link href="/Contact" className="block hover:text-[#FF9F0D]">Contact</Link>
 
             {/* Mobile Search Bar */}
             <div className="relative flex items-center">
@@ -113,7 +100,7 @@ export default function Header() {
                   <FaShoppingCart size={20} />
                 </button>
               </Link>
-              <Link href="/SignUp">
+              <Link href="/Login">
                 <button className="text-white">
                   <FaUserAlt size={20} />
                 </button>

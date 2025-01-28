@@ -86,7 +86,7 @@ export default function Hero() {
               </li>
             </ul>
             <Link
-              href="/about"
+              href="/About"
               className="inline-block bg-transparent border border-[#FF9F0D] text-[#FF9F0D] py-2 px-6 rounded-full font-medium hover:bg-orange-500 hover:text-black transition duration-300"
             >
               Read More
