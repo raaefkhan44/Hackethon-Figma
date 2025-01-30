@@ -2,76 +2,24 @@
 import MainBreadcum from "@/app/components/MainBreadCrum";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { FiX } from "react-icons/fi";
+import { useAppDispatch, useAppSelector } from "../../../../hooks/redux";
+import { decrementQuantity, getCart, incrementQuantity, removeFromTheCart } from "../../../../redux/cartSlice";
+import { urlFor } from "@/sanity/lib/image";
+import { Dhill } from "../../../../types/Product";
 
-// Define the type for a cart item
-type CartItem = {
-  id: number;
-  name: string;
-  price: number;
-  quantity: number;
-  image: string;
-};
+
+
+
 
 const CartPage = () => {
-  // Add types to the state
-  const [cartItems, setCartItems] = useState<CartItem[]>([
-    {
-      id: 1,
-      name: "Burger",
-      price: 15.99,
-      quantity: 1,
-      image: "/recent-p.png",
-    },
-    {
-      id: 2,
-      name: "Fresh Lime",
-      price: 10.99,
-      quantity: 1,
-      image: "/shop-5.png",
-    },
-    {
-      id: 3,
-      name: "Pizza",
-      price: 25.98,
-      quantity: 1,
-      image: "/pizza.png",
-    },
-    {
-      id: 4,
-      name: "Chocolate Muffin",
-      price: 8.99,
-      quantity: 1,
-      image: "/bf3.png",
-    },
-    {
-      id: 5,
-      name: "Cheese Butter",
-      price: 12.49,
-      quantity: 1,
-      image: "/shop-2.png",
-    },
-  ]);
-
-  // Add types to function parameters
-  const handleQuantityChange = (id: number, change: number) => {
-    setCartItems((prev) =>
-      prev.map((item) =>
-        item.id === id
-          ? { ...item, quantity: Math.max(1, item.quantity + change) }
-          : item
-      )
-    );
-  };
-
-  const handleRemoveItem = (id: number) => {
-    setCartItems((prev) => prev.filter((item) => item.id !== id));
-  };
-
-  const calculateTotal = () => {
-    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
-  };
+    const dispatch = useAppDispatch()
+    const cartSelector = useAppSelector(getCart)
+      let totalPrice = 0;
+      cartSelector.forEach((item:Dhill) => {
+        totalPrice += item.price * item.quantity;
+      })
+  
 
   return (
     <>
@@ -90,11 +38,11 @@ const CartPage = () => {
             </tr>
           </thead>
           <tbody>
-            {cartItems.map((item) => (
-              <tr key={item.id} className="border-b">
+            {cartSelector.map((item:Dhill) => (
+              <tr key={item._id} className="border-b">
                 <td className="p-3 flex items-center space-x-3">
                   <Image
-                    src={item.image}
+                    src={urlFor(item.image).url()}
                     alt={item.name}
                     width={150}
                     height={150}
@@ -107,14 +55,19 @@ const CartPage = () => {
                   <div className="flex items-center">
                     <button
                       className="px-2 py-1 border border-gray-300 rounded"
-                      onClick={() => handleQuantityChange(item.id, -1)}
+                      onClick={() => {
+                        if(item.quantity > 1){
+                          dispatch(decrementQuantity(item))
+                      }}}
                     >
                       -
                     </button>
                     <span className="px-4">{item.quantity}</span>
                     <button
                       className="px-2 py-1 border border-gray-300 rounded"
-                      onClick={() => handleQuantityChange(item.id, 1)}
+                      onClick={() => {
+                        dispatch(incrementQuantity(item))
+                      }}
                     >
                       +
                     </button>
@@ -123,7 +76,9 @@ const CartPage = () => {
                 <td className="p-3">${(item.price * item.quantity).toFixed(2)}</td>
                 <td className="p-3">
                   <button
-                    onClick={() => handleRemoveItem(item.id)}
+                    onClick={() => {
+                      dispatch(removeFromTheCart(item._id))
+                    }}
                     className="text-red-500 hover:text-red-700"
                   >
                     <FiX className="text-lg" />
@@ -155,15 +110,15 @@ const CartPage = () => {
           <div className="space-y-2">
             <div className="flex justify-between">
               <span>Cart Subtotal</span>
-              <span>${calculateTotal()}</span>
+              <span>${totalPrice}</span>
             </div>
             <div className="flex justify-between">
               <span>Shipping Charge</span>
-              <span>$5.00</span>
+              <span>$00</span>
             </div>
             <div className="flex justify-between font-semibold">
               <span>Total Amount</span>
-              <span>${(parseFloat(calculateTotal()) + 5).toFixed(2)}</span>
+              <span>${totalPrice}</span>
             </div>
           </div>
           <Link href='/Checkout'>

@@ -1,8 +1,8 @@
 
 import Link from "next/link"
-import MainBreadcum from "../../components/MainBreadCrum"
+import MainBreadcum from "../components/MainBreadCrum"
 
-const Error = () => {
+const NotFound = () => {
     return (
 
         <>
@@ -32,4 +32,4 @@ const Error = () => {
     )
 }
 
-export default Error
+export default NotFound

@@ -4,6 +4,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
+interface types{
+  textColor?: string;
+}
+
 // Testimonial Data
 const testimonials = [
   {
@@ -53,7 +57,7 @@ const testimonials = [
   },
 ];
 
-export const Testimonials = () => {
+export const Testimonials = ({textColor}:types) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -69,12 +73,12 @@ export const Testimonials = () => {
   };
 
   return (
-    <div className="py-16 bg-black text-white relative overflow-hidden">
+    <div className="py-16  text-white relative overflow-hidden">
       <div className=" max-w-[1273px] mx-auto  mb-10">
         <p className="text-base sm:text-lg lg:text-xl font-serif italic text-[#FF9F0D]">
           Testimonials
         </p>
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
+        <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-semibold ${textColor} `}>
           What our <span className="text-[#FF9F0D]">clients</span> are saying
         </h2>
       </div>
@@ -92,7 +96,7 @@ export const Testimonials = () => {
                 transform: `translateX(-${currentIndex * 100}%)`,
               }}
             >
-              <div className="bg-white text-black rounded-lg p-4 sm:p-6 lg:p-8 shadow-lg">
+              <div className="bg-white text-black rounded-lg p-4 border border-[#FF9F0D] sm:p-6 lg:p-8 shadow-lg">
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 hover:cursor-pointer rounded-full overflow-hidden mb-4">
                     <Image
@@ -108,7 +112,7 @@ export const Testimonials = () => {
                     {testimonial.comment}
                   </p>
 
-                  <div className="flex mb-4">
+                  <div className="flex mb-4 ">
                     {Array.from({ length: 5 }).map((_, index) => (
                       <span
                         key={index}
@@ -135,13 +139,13 @@ export const Testimonials = () => {
 
         {/* Arrows */}
         <button
-          className="absolute left-2 sm:left-5 top-1/2 transform -translate-y-1/2 bg-[#FF9F0D] rounded-full p-2 shadow-lg z-10"
+          className="absolute left-36 sm:left-5 top-1/2 transform -translate-y-1/2 bg-[#FF9F0D] rounded-full p-2 shadow-lg z-10"
           onClick={prevSlide}
         >
           <FaChevronLeft className="text-white w-5 h-5 sm:w-6 sm:h-6" />
         </button>
         <button
-          className="absolute right-2 sm:right-5 top-1/2 transform -translate-y-1/2 bg-[#FF9F0D] rounded-full p-2 shadow-lg z-10"
+          className="absolute right-36 sm:right-5 top-1/2 transform -translate-y-1/2 bg-[#FF9F0D] rounded-full p-2 shadow-lg z-10"
           onClick={nextSlide}
         >
           <FaChevronRight className="text-white w-5 h-5 sm:w-6 sm:h-6" />

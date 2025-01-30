@@ -14,6 +14,11 @@ import sampleDish6 from "../../../public/why-3.png";
 import sampleDish7 from "../../../public/why-4.png";
 import sampleDish8 from "../../../public/why-2.png";
 
+interface MenucardProps {
+  bgColor?: string; // Specify the type for bgColor
+  color? : string;
+}
+
 // Constants for categories and dishes
 const CATEGORY_TABS = ["Breakfast", "Lunch", "Dinner", "Dessert", "Drink", "Snack", "Soups"];
 const DISHES = [
@@ -28,7 +33,7 @@ const DISHES = [
   { id: 9, title: "Berry Bliss", description: "Lacus nisi, et ac dapibus velit in consequat.", img: sampleDish3, category: "Breakfast", price: 10.0 },
   { id: 10, title: "Sunrise Special", description: "Lacus nisi, et ac dapibus velit in consequat.", img: sampleDish3, category: "Breakfast", price: 14.0 },
 ];
-export const Menucard = () => {
+export const Menucard = ({ bgColor , color}: MenucardProps) => {
   const [category, setCategory] = useState<string>(CATEGORY_TABS[0]);
 
   // Filter dishes based on selected category
@@ -38,11 +43,11 @@ export const Menucard = () => {
   );
 
   return (
-    <div className="bg-black mx-auto py-8 px-4 sm:px-6 lg:px-12">
+    <div className=" mx-auto py-8 px-4 sm:px-6 lg:px-12">
       {/* Header Section */}
       <header className="text-center mb-12">
         <p className="text-[#FF9F0D] text-lg sm:text-xl font-serif  md:text-2xl italic">Choose & Pick</p>
-        <h2 className="text-3xl md:text-5xl font-bold mt-2 text-white">
+        <h2 className={`text-3xl md:text-5xl font-bold mt-2 ${color}`}>
           <span className="text-[#FF9F0D]">From</span> Our Menu
         </h2>
       </header>
@@ -74,7 +79,7 @@ export const Menucard = () => {
     
 
       {/* Content Section */}
-      <section className="flex flex-col lg:flex-row items-start gap-6">
+      <section className="flex flex-col lg:flex-row items-start border border-black rounded-lg gap-6">
         {/* Decoration Image */}
         <aside className="relative hidden lg:flex w-1/3 flex-col items-center">
           <Image src={menuCategoryDill} alt="Menu Decoration Dill" className="w-2/3 mt-12" />
@@ -87,7 +92,7 @@ export const Menucard = () => {
               {filteredDishes.map((dish) => (
                 <li
                   key={dish.id}
-                  className="flex items-center gap-4 bg-black p-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl"
+                  className={`flex items-center ${bgColor} gap-4 p-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl`}
                 >
                   <Image
                     src={dish.img}
