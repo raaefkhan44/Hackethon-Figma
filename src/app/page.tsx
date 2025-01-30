@@ -14,7 +14,6 @@ export default function Home() {
     <div className="bg-transparent text-white">
 
       <main>
-<<<<<<< HEAD
         <Hero />
         <ImageGrid />
 
@@ -31,24 +30,6 @@ export default function Home() {
         <HomeBlog />
       </main>
       <Footer />
-=======
-        <Hero/>
-        <ImageGrid />
-        <div className='bg-black'>
-        <Menucard/>
-        </div>
-        <OurChef />
-        <div className='bg-black'>
-        <Testimonials/>
-        </div>
-        
-
-        <ActiveBanner />    
-          
-        <HomeBlog/> 
-      </main>
-<Footer/>
->>>>>>> 547e5482b751d16a272f7a53f853496ae5f287a2
     </div>
   );
 }
