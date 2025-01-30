@@ -54,10 +54,19 @@ export default function Header() {
             <Link href="/Menu" className="hover:text-[#FF9F0D]">Menu</Link>
             <Link href="/Blog" className="hover:text-[#FF9F0D]">Blog</Link>
               <Link href='/About'>
+<<<<<<< HEAD
                 <button className="hover:text-[#FF9F0D] flex items-center">
                   About <span className="ml-1"></span>
                 </button>
               </Link>
+=======
+              <button className="hover:text-[#FF9F0D] flex items-center">
+                About <span className="ml-1"></span>
+              </button>
+              </Link>
+             
+            </div>
+>>>>>>> 547e5482b751d16a272f7a53f853496ae5f287a2
             <Link href="/Shop" className="hover:text-[#FF9F0D]">Shop</Link>
             <Link href="/Contact" className="hover:text-[#FF9F0D]">Contact</Link>
           </nav>
